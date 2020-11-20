@@ -3,6 +3,7 @@ const Pesan = ({ nama, pesan }) => {
     <div>
       <h2>Nama: {nama}</h2>
       <p>Pesan: {pesan}</p>
+      <button>Hapus</button>
     </div>
   );
 };

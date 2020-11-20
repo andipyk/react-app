@@ -1,13 +1,16 @@
-import Pesan from "./components/Pesan";
 import BuatPesan from "./components/BuatPesan";
+import PesanList from "./components/PesanList";
+import { useState } from "react";
 
 function App() {
+  const nama = "Andi Syafrianda";
+  const [pesan, setPesan] = useState("");
+
   return (
     <div>
-      <h1>My React</h1>
-      <Pesan nama="andi" pesan="halo gaes" />
-      <Pesan nama="budi" pesan="yoi" />
-      <Pesan nama="cristo" pesan="tess" />
+      <h1>Tugas React</h1>
+      <BuatPesan setPesan={setPesan} pesan={pesan} />
+      <PesanList nama={nama} pesan={pesan} />
     </div>
   );
 }
