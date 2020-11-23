@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import List from "./components/List";
-import "./styles.css";
+// import "./styles.css";
 
 function App() {
   const API_URL = "https://jsonplaceholder.typicode.com/users";
@@ -13,7 +13,11 @@ function App() {
     const data = await response.json();
 
     setMyData(data);
-    console.log(myData[0]);
+    // console.log(myData[0]);
+  };
+
+  const deleteListItem = (id) => {
+    setMyData(myData.filter((value) => value.id !== id));
   };
 
   const [myData, setMyData] = useState([]);
@@ -23,7 +27,10 @@ function App() {
       <List />
       <ol>
         {myData.map((v) => (
-          <li>{v.name}</li>
+          <li>
+            {v.name}
+            <button onClick={() => deleteListItem(v.id)}>x</button>
+          </li>
         ))}
       </ol>
     </div>
