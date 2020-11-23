@@ -1,7 +1,11 @@
+// import { useState } from "react";
+import List from "./components/List";
+import "./styles.css";
+
 function App() {
   return (
     <div className="App">
-      <h1>initial</h1>
+      <List />
     </div>
   );
 }
