@@ -1,5 +1,3 @@
-import logo from "./logo.svg";
-import "./App.css";
 import PrivatePage from "./pages/PrivatePage";
 import { signin } from "./action";
 import { useSelector, useDispatch } from "react-redux";
